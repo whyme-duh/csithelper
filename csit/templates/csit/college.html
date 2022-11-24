@@ -1,0 +1,29 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+<div class="container">
+    <h1 class="clg-title pt-5">Top CSIT Colleges In Nepal </h1>
+    <p>Choosing good and best college for CSIT and other courses might be hard. Here are the top 10 colleges in Nepal for pursuing CSIT. This is not an actual ranking of colleges but are based upon student's experinces, fees, facilities and management.</p>
+    <div class="clg-list">
+        <ul>
+            {% for clg in colleges %}
+            <li class="clg-content">
+                <div class="clg-links ">
+                    <a href="{{clg.website}}" class="clg-name">{{clg.name}}</a>
+                    <a href="{{clg.map_address}}" class="fa fa-map-marker"></a>
+                </div>
+                <div class="other-content">
+                    <p>-{{clg.content}}</p>
+                    <p>-<strong>Fee</strong>: Approx. Rs {{clg.fee}} lakhs</p>
+                    <p>-<strong>Affiliated</strong>: {{clg.affiliated}}</p>
+                    <p>-<strong>Location</strong>: {{clg.location}}</p>
+                    <p>-<strong>Phone numbers</strong>: {{clg.phn_one}}, {{clg.phn_two}}</p>
+                </div>
+                    
+
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+{% endblock %}

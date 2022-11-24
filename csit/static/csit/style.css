@@ -1,0 +1,178 @@
+.marks{
+  font-weight: 500;
+  line-height: 10px;
+  padding-top: 0.25em;
+}
+
+/* this is used to style other subjects */
+.tabs{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#notes-tab-files{
+  background-color: lightgrey;
+}
+.tabs h4{
+  margin:0.25em;
+  margin-top: 0.25em;
+  font-size: 1.15em;
+  padding: 0.5em;
+  text-align: center;
+  width: fit-content;
+  cursor: pointer;
+  font-weight: 700;
+  border-radius: 5px;
+  border: 1px solid grey;
+
+}
+.tabs h4:hover{
+  background-color: rgb(248, 246, 246);
+}
+
+.single-card{
+  cursor: pointer;
+  padding: 1em;
+  border-radius: 10px;
+  background-color: rgb(239, 235, 235);
+}
+.single-card:hover{
+  background-color: #d8d6d0;
+}
+.single-card a{
+  text-decoration: none;
+}
+.other-sub,
+.other-units{
+  margin-top: 2em;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height:fit-content;
+  border-radius: 15px;
+}
+
+ .other-sub-title, 
+ .other-units-title{
+  padding-bottom:0.5em ;
+  font-size: 2em;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+ }
+
+ .other-sub-item,
+ .other-note-item{
+    font-weight: 600;
+    margin: 0.5em;
+ }
+.line{
+  height: 50vh;
+  width: 2px;
+  background-color: rgb(225, 223, 223);
+}
+.single-sub{
+  border-radius: 10px;
+  padding: 1em;
+  text-decoration: none;
+  background-color: #faedcd;
+}
+.single-sub:hover{
+  background-color:#ffe9b2 ;
+}
+ .list-group a{
+  text-decoration: none;
+ }
+ .rel-chap{
+  height: fit-content;
+  overflow-y: hidden;
+ }
+.rel-chap-items{
+  text-align: center;
+ 
+}
+.rel-chap-items a{
+  text-decoration: none;
+}
+.rel-chap-items:hover{
+  opacity: 0.8;
+}
+ .bi:hover{
+  color: black;
+ }
+.buttons-group .bi{
+  font-size: 1.25em;
+  font-weight: 900;
+}
+
+
+/* search page style */
+
+.error-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.error-text{
+  text-align: center;
+  margin: 2em;
+  font-size: 2em;
+}
+
+
+/* for college page */
+.clg-title{
+  font-size:2.5em;
+  font-family: 900;
+  color: rgb(29, 29, 29);
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.clg-list ul{
+  list-style-type:decimal;
+  font-size: 1.5em;
+
+}
+.clg-content{
+  padding: 1em;
+  border-radius: 10px;
+  background-color:rgb(221, 242, 254) ;
+}
+.clg-content a{
+  text-decoration: none;
+}
+.clg-name{
+  color: black;
+}
+.clg-links .fa{
+  color: black;
+}
+.clg-links{
+  display: flex;
+  justify-content: space-between;
+}
+.clg-name{
+  font-family: serif;
+  font-size: 1.25em;
+  font-weight: 800;
+
+}
+.other-content{
+  margin: 0.5em 0 0 1em;
+  font-size: 0.75em;
+  line-height: 1.25em;
+}
+ @media screen and (max-width: 450px) {
+  .other-sub,
+  .other-units{
+    margin: 2em;
+    align-items: center;
+  }
+  .file-title{
+    font-size: 1em;
+  }
+  .other-sub-item,
+  .other-note-item{
+    font-size: 0.8em;
+  }
+}
