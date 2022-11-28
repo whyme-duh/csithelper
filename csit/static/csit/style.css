@@ -105,6 +105,21 @@
   font-weight: 900;
 }
 
+.file-detail a {
+  display: flex;
+  text-decoration: none;
+  color: black;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.file-detail button{
+  align-self: center;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(160, 230, 160);
+  padding: 0.4em 1em 0.4em 1em;
+}
 
 /* search page style */
 
@@ -163,15 +178,24 @@
   line-height: 1.25em;
 }
  @media screen and (max-width: 450px) {
+  body{
+    padding: 0;
+  }
+  .embed-responsive{
+    font-size: 0.65em;
+  }
+  
   .other-sub,
   .other-units{
-    margin: 2em;
     align-items: center;
   }
   .file-title{
     font-size: 1em;
   }
-  .other-sub-item,
+  .other-sub-title, .other-units-title{
+    font-size: 1.5em;
+  }
+  .other-sub-item,  
   .other-note-item{
     font-size: 0.8em;
   }

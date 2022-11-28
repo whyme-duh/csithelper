@@ -30,7 +30,7 @@ SECRET_KEY = 'SECRET_KEY_SETTINGS'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
     
-ALLOWED_HOSTS = [ 'studynotesnepal.herokuapp.com', '.localhost', '127.0.0.1', '[::1]'] 
+ALLOWED_HOSTS = [ '*'] 
 
 
 
@@ -62,7 +62,6 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'main.urls'
-
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -128,13 +127,18 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
+
+
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 
 STATIC_URL = '/static/' 
 
-MEDIA_URL = "/media/"
-
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
+MEDIA_URL = '/media/'
+
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 

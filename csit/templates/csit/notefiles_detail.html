@@ -7,8 +7,8 @@
 	<div class="container">
 		{% if notes %}
 			<div class="content mt-2 pb-5">
-				<div class=" sem-box row d-flex justify-content-between pt-3"  >
-					<div class="col-md-8">
+				<div class=" sem-box row  d-flex justify-content-between pt-3"  >
+					<div class="col-md-8 ">
 						<div class="sub-semester-div col-md-12 "> 
 							{% for object in notes|slice:"1"%}
 							/ <a href="{% url 'csit'%}">Home</a>
@@ -22,18 +22,16 @@
 			
 							{%endfor %}
 						</div>
-						
-						<div class=" col-md-12 col-sm-3 p-3 ">
-							<div class=" pt-3" id="actual-links">
+							
+						<div class="note-file col-md-12 col-sm-3 p-md-3 mt-4">
+							<div class="pt-md-3" id="actual-links">
 								{% for object in notes %}
 								{% if object.category.name == "NB" %}
-								<ol class="single-card  row d-flex align-items-center justify-content-between">
+								<ol class="single-card d-flex justify-content-between p-2 ">
 									<div class=" d-flex col-md-10 w-100">
 										<i class="fa fa-file-pdf-o pt-1" style="color: red;"></i>
 										<a  href="{% url 'single-file-detail' object.subject.semester.id object.subject.slug object.slug %}" >
-										
-										<h5 class="file-title text-dark pl-4 ">{{object.name|title}}</h5>
-										
+										<h5 class="file-title text-dark pl-2 ">{{object.name|title}}</h5>
 										</a>
 									</div>
 									<a href="{{object.download_link}}"><i class="bi p-4 bi-download"></i></a>
@@ -47,7 +45,8 @@
 								
 							</div>
 						</div>
-						<div class=" col-md-12 col-xs-3  p-3 mt-3">
+					</div>
+						<!-- <div class=" col-md-12 col-xs-3  p-3 mt-3">
 							
 							<div class="pt-3" id="actual-links-question">
 								{% for object in notes %}
@@ -114,7 +113,7 @@
 								
 							</div>
 						</div>
-					</div>
+					</div> -->
 					<div class="right-side col-md-4">
 						<!-- <div class="col-md-12 tabs p-3">
 							<div class="  tab-btn" onclick="display('actual-links')">

@@ -8,9 +8,9 @@
             /<a href="{% url 'csit'%}">Home</a>
 			/<a href="{% url 'semester-detail' note.subject.semester.id %}">{{note.subject.semester}}</a>
 			/<a href="{% url 'subject-detail' note.subject.semester.id note.subject.slug %}">{{note.subject}}</a>
-            <div class="file-detail d-flex justify-content-between ">
+            <div class="file-detail d-flex justify-content-between pt-3">
                 <h5 class="note-title text-center pt-2">{{note.name}}</h5>
-				<a href="{{note.download_link}}" >Download</a>
+				<a href="{{note.download_link}}" ><button>Download</button></a>
             </div>
             <iframe src="{{note.link}}" class="embed-responsive-item drive-file mt-5 pt-5" allowfullscreen ></iframe>
        

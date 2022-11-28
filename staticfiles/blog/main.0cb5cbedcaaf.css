@@ -65,7 +65,7 @@ ul {
 
 }
 .title p{
-  color: rgb(0, 0, 0);
+  color: white;
   font-family: monospace;
 }
 
@@ -110,7 +110,6 @@ ul {
 .front-page-img .title{
   position: absolute;
   text-align: center;
- 
 }
 .title form{
   display: flex;

@@ -51,24 +51,22 @@ ul {
 
 .title h1{
   font-size: 3em;
-  font-weight: 900;
   color: white;
+  font-weight: 900;
 }
 .title h5{
   font-size: 1.5em;
   font-weight: 900;
-  color: white;
 }
 .top-title{
-  font-size: 3em;
+  font-size: clamp(1.5em,5vh,3em);
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
 }
 .title p{
-  color: white;
+  font-weight: 900;
   font-family: monospace;
 }
-
 
 .files {
   background-color: rgb(175, 195, 212);
@@ -99,7 +97,7 @@ ul {
   display: none;
 }
 .background-image{
-  height: 50vh;
+  height: 70vh;
   width: 100%;
 }
 .front-page-img{
@@ -110,6 +108,8 @@ ul {
 .front-page-img .title{
   position: absolute;
   text-align: center;
+  color: black;
+ 
 }
 .title form{
   display: flex;
@@ -125,7 +125,7 @@ ul {
 button[type="submit"]{
   text-indent: -999px;
   overflow: hidden;
-  width: 60px;
+  width: 30px;
   padding: 0;
   margin-top: 10px;
   border: 1px solid transparent;
@@ -295,7 +295,7 @@ a.article-title:hover {
   text-decoration: none;
 }
 .sem-title {
-  font-size: 1.25em;
+  font-size: clamp(1em, 1.25em,3em);
   font-weight: 700;
 }
 
@@ -304,15 +304,7 @@ a.article-title:hover {
   font-size: 0.85em;
   letter-spacing: 0.5px;
 }
-.file-detail a {
-  text-align: center;
-  text-decoration: none;
-  color: black;
-  padding: 10px 15px 10px 15px;
-  border-radius: 20px;
-  font-weight: 600;
-  background-color: rgb(178, 178, 235);
-}
+
 /* trending box  */
 .trending-title {
   font-size: 1.5em;
@@ -407,9 +399,10 @@ a.article-title:hover {
   padding: 1em;
 }
 
-
-.page-footer {
-  margin-top: 20em;
+/* footer */
+.page-footer{
+  margin-top: 5em;
+  background-color: rgba(194, 189, 189, 0.732);
 }
 
 .footer-right{
@@ -417,7 +410,7 @@ a.article-title:hover {
   flex-direction: column;
 }
 .footer-nav a{ 
-  padding-top: 1em  ;
+  padding-top: 1em;
   text-decoration: none;
   padding: 0.5em;
   color: rgb(118, 113, 113);
@@ -428,40 +421,122 @@ a.article-title:hover {
   font-weight: 900;
  
 }
+.quick-links ul{
+  padding-top: 1em;
+  padding-left: 1em;
+  list-style: none;
+}
 .social-media a{
   text-decoration: none;
 }
 .social-media .fa{
   color: black;
-  font-size: 1.5em;
+  font-size: 1em;
   padding: 0.5em;
 }
 .social-media .fa:hover{
   opacity: 0.8;
 }
 
+
+
+@media screen and (max-width:1450px) {
+  .difficulty{
+    display: block;
+  }
+  .difficulty p{
+    margin-bottom: 0;
+  }
+  
+}
+@media screen and (max-width:850px) {
+ 
+  .semester-box{
+    margin: 0;
+  }
+  .semester-box .card{
+    width: 100%;
+  }
+  .difficulty{
+    display: block;
+  }
+  .difficulty p{
+    margin-bottom: 0;
+  }
+  
+  
+}
+
+@media screen and (max-width:765px) {
+  .semester-box{
+    margin: 0;
+    gap: 1em;
+  }
+  .difficulty{
+    display: flex;
+  }
+  .difficulty p{
+    margin-bottom: 0;
+  }
+  
+  
+}
+
 @media screen and (max-width: 450px) {
+  /* navbar */
+  .logo{
+    width: 80%;
+    height: 30px;
+  }
+  .navbar-toggler-icon{
+    font-size: 0.65em;
+  }
+  .nav-link{
+    font-size: 0.85em;
+  }
+  .front-page-img img{
+    height: 40vh;
+  }
+  
+  .front-page-img .title{
+    font-size: 0.85em;
+  }
+
   .content h4 {
     font-size: 1.35rem;
   }
   .difficulty {
     width: 100%;
     font-size: 0.85em;
-    justify-content: center;
+    justify-content: flex-start;
   }
   .sub-intro {
     font-size: 1.2em;
   }
+  
   .sem-title {
     font-size: 0.75em;
-    text-align: center;
+    padding-bottom: 0em;
+    text-align: left;
   }
   .semester-desc{
-    text-align: center;
+    text-align: left;
+    padding-bottom: 0;
   }
   .sem-box{
     padding: 1em;
   }
+  .title form{
+    width: 100%;
+  }
+  .title input[type="search"]{
+    width: 100%;
+    
+  }
+  .card{
+    padding: 0;
+  }
+  
   /* subject page */
   .content-subject h4 {
     font-size: 1.1em;
@@ -469,14 +544,51 @@ a.article-title:hover {
   .content-code {
     font-size: 0.85em;
   }
+  .sub-difficulty{
+    justify-content: flex-start;
+    padding-left: 0.6em;
+  }
+  .difficulty .span{
+    font-size: 1em;
+  }
+  .other-sem{
+    display: flex;
+    flex-direction: column;  
+    justify-content: center;
+    align-items: center;
+  }
 
   /* for the files page */
+  .sub-semester-div .top-title{
+    font-size: 1.5em;
+    padding-top: 0.5em;
+  }
+  .marks{
+    font-size: 0.75em;
+  }
   .note-title {
     font-size: 1.5em;
     font-weight: 90;
   }
   .sem-content {
     font-size: 1.15em;
+  }
+  /* single-note file */
+
+  .single-card{
+    display: block;
+  }
+  .file-title{
+    font-size: 0.2em;
+  }
+  .single-card .fa{
+    font-size: 0.7em;
+  }
+  .single-card h5{
+    font-size: 0.82em;
+  }
+  .single-card i{
+    font-size: 0.7em;
   }
   /* blog page */
   .time {
@@ -493,6 +605,11 @@ a.article-title:hover {
   .blog-media {
     margin: auto;
     padding: 0;
+  }
+
+  /*  foooter -part */
+  .footer{
+
   }
 }
 
