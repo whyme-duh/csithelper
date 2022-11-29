@@ -27,20 +27,18 @@
 							<div class="pt-md-3" id="actual-links">
 								{% for object in notes %}
 								{% if object.category.name == "NB" %}
-								<ol class="single-card d-flex justify-content-between p-2 ">
-									<div class=" d-flex col-md-10 w-100">
-										<i class="fa fa-file-pdf-o pt-1" style="color: red;"></i>
-										<a  href="{% url 'single-file-detail' object.subject.semester.id object.subject.slug object.slug %}" >
-										<h5 class="file-title text-dark pl-2 ">{{object.name|title}}</h5>
-										</a>
-									</div>
-									<a href="{{object.download_link}}"><i class="bi p-4 bi-download"></i></a>
+								<a href="{% url 'single-file-detail' object.subject.semester.id object.subject.slug object.slug %}" >
+
+								<ol class="single-card row d-flex justify-content-between p-2 ">
+										<div class="d-flex ">
+											<i class="fa fa-file-pdf-o pt-1 pt-md-2 pl-2" style="color: red;"></i>
+											<h5 class="file-title text-dark pl-2 pt-1">{{object.name|title}}</h5>
+										</div>
 
 								</ol>
-								
+								</a>
 
 								{% endif %}
-
 								{%endfor %}
 								
 							</div>

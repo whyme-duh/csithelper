@@ -21,7 +21,7 @@
 					<div class="sem-box row d-flex justify-content-between  pt-3 pb-5" >
 						
 						{% for sub in subjects %}
-							<div class=" col-md-12 card m-2 p-2" >
+							<div class=" col-md-12 card m-2 p-2 p-md-3" >
 								{# it links up with subject-detail #}
 								<a href = "{% url 'subject-detail' sub.semester.id sub.slug %}" style="text-decoration: none;color: rgb(71, 70, 70);" >
 									<div class="row content-subject pt-3 d-flex justify-content-between">

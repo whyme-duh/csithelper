@@ -2,7 +2,7 @@
 {% load static %}
 {% block content%}
 <div class=" container-fluid front-page-img rounded d-flex justify-content-center align-items-center">
-    <img src="/media/webimages/background-1.jpg" alt = "background-image" class="background-image"> 
+    <img src="/media/webimages/background.jpg" alt = "background-image" class="background-image"> 
     <div class="title m-5" >
         <h1>CSIT NEPAL</h1>
         <p>Resource Providing Platform Where You Can Find Books, Notes, etc For CSIT Students.</p>
@@ -19,8 +19,7 @@
     {% for sub in semester %}
     <div class="content mt-3 ">
         <div class="sem-box row d-flex justify-content-center  pt-3" >
-            
-                <div class=" col-md-8 card m-2 " >
+                <div class=" col-md-8 card p-2" >
                     {# it links up with subject-detail #}
                     <a href = "{% url 'subject-detail' sub.semester.id sub.slug %}" style="text-decoration: none;color: rgb(71, 70, 70);" >
                         <div class="row content-subject pt-3 d-flex justify-content-between">

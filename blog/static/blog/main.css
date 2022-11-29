@@ -305,6 +305,11 @@ a.article-title:hover {
   letter-spacing: 0.5px;
 }
 
+/*  f*/
+
+.note-file a {
+  text-decoration: none;
+}
 /* trending box  */
 .trending-title {
   font-size: 1.5em;
@@ -485,7 +490,7 @@ a.article-title:hover {
 @media screen and (max-width: 450px) {
   /* navbar */
   .logo{
-    width: 80%;
+    width: 100%;
     height: 30px;
   }
   .navbar-toggler-icon{
@@ -548,6 +553,15 @@ a.article-title:hover {
     justify-content: flex-start;
     padding-left: 0.6em;
   }
+  .sub-difficulty p{
+    font-size: 0.75em;
+
+  }
+  .sub-difficulty .span{
+    padding-top: 0.5em;
+    font-size: 0.75em;
+  }
+  
   .difficulty .span{
     font-size: 1em;
   }
@@ -582,10 +596,10 @@ a.article-title:hover {
     font-size: 0.2em;
   }
   .single-card .fa{
-    font-size: 0.7em;
+    font-size: 1em;
   }
   .single-card h5{
-    font-size: 0.82em;
+    font-size: 0.9em;
   }
   .single-card i{
     font-size: 0.7em;
@@ -608,8 +622,6 @@ a.article-title:hover {
   }
 
   /*  foooter -part */
-  .footer{
-
-  }
+  
 }
 
