@@ -24,7 +24,7 @@
 						<a href = "{% url 'semester-detail' sem.id  %}" style="text-decoration: none;color: rgb(71, 70, 70);" >
 							{% if sem.difficulty == "MEDIUM" %}
 									<div class=" col-md-12 difficulty  ">
-										<p class="p-1 "><strong>Difficulty</strong>: </p>
+										<p class="p-1 m-0"><strong>Difficulty</strong>: </p>
 										<div class="span p-1">
 											<span class="fa fa-star checked"></span>
 											<span class="fa fa-star checked"></span>
@@ -35,7 +35,7 @@
 									</div>
 								{% elif sem.difficulty == "EASY" %}
 									<div class="col-md-12 difficulty">
-										<p class="p-1"><strong>Difficulty</strong>: </p>
+										<p class="p-1 m-0"><strong>Difficulty</strong>: </p>
 										<div class="span p-1">
 											<span class="fa fa-star checked"></span>
 											<span class="fa fa-star checked"></span>
@@ -46,7 +46,7 @@
 									</div>
 								{% elif sem.difficulty == "HARD" %}
 									<div class="col-md-12 difficulty ">
-										<p class="p-1"><strong>Difficulty</strong>: </p>
+										<p class="p-1 m-0"><strong>Difficulty</strong>: </p>
 										<div class="span p-1">
 											<span class="fa fa-star checked"></span>
 											<span class="fa fa-star checked"></span>
@@ -56,7 +56,7 @@
 										</div>
 									</div>
 								{% endif %}
-							<div class="row content pt-2 pt-md-3 d-flex justify-content-between">
+							<div class="row content pt-2 d-flex justify-content-between">
 								<h4 class="sem-title col-md-12 pb-md-2">{{sem.title}}</h4>
 								
 							

@@ -172,9 +172,9 @@ form .fa{
   border: 0;
   animation-name: card-animation;
   animation-duration:1s ;
-  box-shadow: 0px 1px 5px rgb(223, 222, 222);
+  /* box-shadow: 0px 1px 5px rgb(223, 222, 222); */
   border-radius:10px ;
-  background-color: rgb(229, 239, 250);
+  background-color: rgb(254, 221, 175);
 }
 .sem-box .card{
   border: 0;
@@ -182,11 +182,14 @@ form .fa{
   animation-duration:1s ;
   box-shadow: 0px 1px 10px rgb(223, 222, 222);
   border-radius:10px ;
-  background-color: rgb(229, 239, 250);
+  background-color: rgb(241, 221, 184);
+
 }
 .card:hover{
   cursor: pointer;
-  background-color: rgb(149, 199, 224);
+  background-color: rgba(254, 221, 175, 0.618);
+
+
 
 }
 .content-section {
@@ -261,6 +264,7 @@ a.article-title:hover {
 .difficulty {
   display: flex;
   justify-content: start;
+  margin: 0;
   padding: 0;
 }
 .sub-difficulty {

@@ -18,13 +18,13 @@
 				
 		
 				<div class="content mt-3 ">
-					<div class="sem-box row d-flex justify-content-between  pt-3 pb-5" >
+					<div class="sem-box row d-flex justify-content-between  pt-3" >
 						
 						{% for sub in subjects %}
-							<div class=" col-md-12 card m-2 p-2 p-md-3" >
+							<div class=" col-md-12 card m-2 p-2 pl-md-3 pr-md-4" >
 								{# it links up with subject-detail #}
 								<a href = "{% url 'subject-detail' sub.semester.id sub.slug %}" style="text-decoration: none;color: rgb(71, 70, 70);" >
-									<div class="row content-subject pt-3 d-flex justify-content-between">
+									<div class="row content-subject pt-1 d-flex justify-content-between">
 										<h4 class="sem-title col-md-8">{{sub.title}}</h4>
 										{% if sub.difficulty == "MEDIUM" %}
 											<div class="col-md-4 sub-difficulty">
