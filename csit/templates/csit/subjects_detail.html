@@ -3,6 +3,12 @@
 {% extends "blog/base.html"%}
 
 
+<title>
+	{% block title %}{{page_title.title}}{% endblock %}
+	
+</title>
+
+
 {%block content %}
 	<div class=" container ">
 		<div class="row pt-md-4 d-flex justify-content-between">
@@ -12,6 +18,7 @@
 					/<a href="{% url 'csit'%}"> Home</a>
 					<h1 class="top-title">{{sub.semester}}</h1>
 					<p>{{sub.semester.content}}</p>
+
 					{%endfor %}	
 					
 				</div>
@@ -64,7 +71,7 @@
 									
 									</div>
 									<div class="content-code d-flex justify-content-between">
-										<p class="article-content">{{sub.code}}</p>
+										<p class="content">{{sub.code}}</p>
 										<p class="content"><strong>Full Marks : </strong>{{sub.fullMarks}}</p>
 										<p class="content"><strong>Practical Marks : </strong>{{sub.labMarks}}</p>
 									</div>

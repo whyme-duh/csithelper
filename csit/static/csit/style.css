@@ -36,10 +36,10 @@
   cursor: pointer;
   padding: 1em;
   border-radius: 10px;
-  background-color: rgb(239, 235, 235);
+  background-color: #C1C8E4;
 }
 .single-card:hover{
-  background-color: #d8d6d0;
+  opacity: 0.9;
 }
 .single-card a{
   text-decoration: none;
@@ -58,7 +58,7 @@
  .other-units-title{
   padding-bottom:0.5em ;
   font-size: 2em;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: var(--sem-font)
  }
 
  .other-sub-item,
@@ -75,10 +75,10 @@
   border-radius: 10px;
   padding: 1em;
   text-decoration: none;
-  background-color: #faedcd;
+  background-color: #97a6e1;
 }
 .single-sub:hover{
-  background-color:#ffe9b2 ;
+  background-color:#C1C8E4 ;
 }
  .list-group a{
   text-decoration: none;
@@ -117,10 +117,17 @@
   align-self: center;
   border: none;
   border-radius: 10px;
-  background-color: rgb(160, 230, 160);
+  background-color: #5580E9;
+  /* background-color: rgb(160, 230, 160); */
   padding: 0.4em 1em 0.4em 1em;
 }
 
+iframe{
+  margin-top: 7em;
+}
+.fa-download{
+  color: white;
+}
 /* search page style */
 
 .error-div{
@@ -199,4 +206,5 @@
   .other-note-item{
     font-size: 0.8em;
   }
+  
 }

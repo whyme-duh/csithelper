@@ -1,4 +1,6 @@
 {% extends "blog/base.html"%}
+<title>{% block title%}CsitHelper | Nepal{% endblock %}</title>
+
 {%block content %}
 	<div class=" container-fluid front-page-img rounded d-flex justify-content-center align-items-center">
 		<img src="media/webimages/background.jpg" alt = "background-image" class="background-image"> 
@@ -57,7 +59,7 @@
 									</div>
 								{% endif %}
 							<div class="row content pt-2 d-flex justify-content-between">
-								<h4 class="sem-title col-md-12 pb-md-2">{{sem.title}}</h4>
+								<h4 class="sem-title col-md-12 pb-md-2 	">{{sem.title}}</h4>
 								
 							
 							</div>

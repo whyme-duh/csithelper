@@ -1,6 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Lobster+Two&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
-::root {
+
+
+:root {
+  --primary-title-font: 'Barlow Condensed', sans-serif;
+  --paragraph-font:'Lobster Two', cursive;
+  --sem-font:'Anton', sans-serif;
 }
 *{
   margin: 0;
@@ -8,21 +14,13 @@
 }
 
 body {
-  background: #ffffff;
+  background-color:#EDE2DC;
   color: #333333;
   height: 100%;
   min-height: 100%;
   margin-top: 4rem;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: #444444;
-}
 
 ul {
   margin: 0;
@@ -37,10 +35,13 @@ ul {
 }
 .site-header .navbar-nav .nav-link {
   color: #1c1d1f;
+  margin-right: 0.5em;
+  font-size: 1.25em;
+  font-family: var(--paragraph-font);
 }
 
 .site-header .navbar-nav .nav-link:hover {
-  opacity: 0.7;
+  border-bottom: 1px solid blue;
 }
 
 .site-header .navbar-nav .nav-link.active {
@@ -51,25 +52,27 @@ ul {
 
 .title h1{
   font-size: 3em;
-  font-weight: 900;
   color: white;
+  font-weight: 900;
 }
 .title h5{
   font-size: 1.5em;
   font-weight: 900;
-  color: white;
 }
 .top-title{
-  font-size: 3em;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: clamp(1.5em,5vh,3em);
+  font-family: var(--sem-font);
 
 }
 .title p{
-  color: rgb(0, 0, 0);
-  font-family: monospace;
+  font-weight: 900;
+  font-size: 1.25em;
+  color: black;
+  font-family:var(--paragraph-font);
 }
-
-
+nav{
+  background-color: #5580E9;
+}
 .files {
   background-color: rgb(175, 195, 212);
 }
@@ -99,7 +102,7 @@ ul {
   display: none;
 }
 .background-image{
-  height: 50vh;
+  height: 70vh;
   width: 100%;
 }
 .front-page-img{
@@ -110,6 +113,7 @@ ul {
 .front-page-img .title{
   position: absolute;
   text-align: center;
+  color: black;
  
 }
 .title form{
@@ -126,7 +130,7 @@ ul {
 button[type="submit"]{
   text-indent: -999px;
   overflow: hidden;
-  width: 60px;
+  width: 30px;
   padding: 0;
   margin-top: 10px;
   border: 1px solid transparent;
@@ -154,6 +158,7 @@ form .fa{
   border-radius: 15px;
   
 }
+
 .semester-box{
   display: flex;
   flex-wrap: wrap;
@@ -173,27 +178,40 @@ form .fa{
   border: 0;
   animation-name: card-animation;
   animation-duration:1s ;
-  box-shadow: 0px 1px 5px rgb(223, 222, 222);
   border-radius:10px ;
-  background-color: rgb(229, 239, 250);
+  box-shadow: 7px 10px 5px rgb(223, 222, 222);
+  background-color: #C1C8E4;
 }
 .sem-box .card{
   border: 0;
   animation-name: card-animation;
   animation-duration:1s ;
-  box-shadow: 0px 1px 10px rgb(223, 222, 222);
+  /* box-shadow: 0px 10px 10px rgb(223, 222, 222); */
   border-radius:10px ;
-  background-color: rgb(229, 239, 250);
+  background-color: #C1C8E4;
+
+
+
 }
 .card:hover{
   cursor: pointer;
-  background-color: rgb(149, 199, 224);
+  transition: 0.5s ease;
+  transform: scaleX(110%);
+  transform: scaleY(105%);
+}
+.sem-box .card:hover{
+  cursor: pointer;
+
+
 
 }
+
 .content-section {
   padding: 10px 20px;
   border-radius: 15px;
 }
+
+
 .box .fa:hover{
   opacity: 0.5;
 }
@@ -262,6 +280,7 @@ a.article-title:hover {
 .difficulty {
   display: flex;
   justify-content: start;
+  margin: 0;
   padding: 0;
 }
 .sub-difficulty {
@@ -272,7 +291,7 @@ a.article-title:hover {
 
 .other-sem h1{
    font-size: 2em;
-   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   font-family: var(--sem-font)
 }
 .other-sem a{
   color: black;
@@ -296,8 +315,9 @@ a.article-title:hover {
   text-decoration: none;
 }
 .sem-title {
-  font-size: 1.25em;
+  font-size: clamp(1em, 3.25vh,3em);
   font-weight: 700;
+  font-family: var(--primary-title-font);
 }
 
 .semester-desc{
@@ -305,14 +325,11 @@ a.article-title:hover {
   font-size: 0.85em;
   letter-spacing: 0.5px;
 }
-.file-detail a {
-  text-align: center;
+
+/*  f*/
+
+.note-file a {
   text-decoration: none;
-  color: black;
-  padding: 10px 15px 10px 15px;
-  border-radius: 20px;
-  font-weight: 600;
-  background-color: rgb(178, 178, 235);
 }
 /* trending box  */
 .trending-title {
@@ -407,10 +424,16 @@ a.article-title:hover {
   color: grey;
   padding: 1em;
 }
-
-
-.page-footer {
-  margin-top: 20em;
+main{
+  position: relative;
+  min-height: 70vh;
+}
+/* footer */
+.page-footer{
+  position: absolute;
+  width: 100%;
+  margin-top: 5em;
+  background-color: #C1C8E4;
 }
 
 .footer-right{
@@ -418,66 +441,205 @@ a.article-title:hover {
   flex-direction: column;
 }
 .footer-nav a{ 
-  padding-top: 1em  ;
+  padding-top: 1em;
   text-decoration: none;
   padding: 0.5em;
   color: rgb(118, 113, 113);
 }
 .footer-title {
-  font-family: monospace;
-  font-size: clamp(0.5em, 2.5vh, 2em);
+  font-family: var(--primary-title-font);
+  font-size: clamp(0.5em, 3vh, 2.5em);
   font-weight: 900;
  
+}
+.footer-right p{
+  font-family: var(--paragraph-font);
+}
+.quick-links ul{
+  padding-top: 1em;
+  padding-left: 1em;
+  list-style: none;
 }
 .social-media a{
   text-decoration: none;
 }
 .social-media .fa{
   color: black;
-  font-size: 1.5em;
+  font-size: 1em;
   padding: 0.5em;
 }
 .social-media .fa:hover{
   opacity: 0.8;
 }
 
+
+
+@media screen and (max-width:1450px) {
+  .difficulty{
+    display: block;
+  }
+  .difficulty p{
+    margin-bottom: 0;
+  }
+  
+}
+@media screen and (max-width:850px) {
+ 
+  .semester-box{
+    margin: 0;
+  }
+  .semester-box .card{
+    width: 100%;
+  }
+  .difficulty{
+    display: block;
+  }
+  .difficulty p{
+    margin-bottom: 0;
+  }
+  
+  
+}
+
+@media screen and (max-width:765px) {
+  .semester-box{
+    margin: 0;
+    gap: 1em;
+  }
+  .difficulty{
+    display: flex;
+  }
+  .difficulty p{
+    margin-bottom: 0;
+  }
+  
+  
+}
+
 @media screen and (max-width: 450px) {
+  /* navbar */
+  .logo{
+    width: 100%;
+    height: 30px;
+  }
+  .navbar-toggler-icon{
+    font-size: 0.65em;
+  }
+  .nav-link{
+    font-size: 0.85em;
+  }
+  .front-page-img img{
+    height: 40vh;
+  }
+  
+  .front-page-img .title{
+    font-size: 0.85em;
+  }
+
   .content h4 {
     font-size: 1.35rem;
   }
   .difficulty {
     width: 100%;
     font-size: 0.85em;
-    justify-content: center;
+    justify-content: flex-start;
   }
   .sub-intro {
     font-size: 1.2em;
   }
-  .sem-title {
-    font-size: 0.75em;
+  .semester-box .card{
+    border: 0;
+    animation-name: card-animation;
+    animation-duration:1s ;
+    border-radius:10px ;
+    box-shadow: 0px 2px 5px rgb(223, 222, 222);
+  }
+  .sem-box .sem-title {
+    font-size: 1.15em;
+    padding-bottom: 0em;
+    font-weight: 900;
     text-align: center;
   }
   .semester-desc{
-    text-align: center;
+    text-align: left;
+    padding-bottom: 0;
   }
   .sem-box{
     padding: 1em;
   }
+  .title form{
+    width: 100%;
+  }
+  .title input[type="search"]{
+    width: 100%;
+    
+  }
+  .card{
+    padding: 0;
+  }
+  
   /* subject page */
   .content-subject h4 {
     font-size: 1.1em;
   }
   .content-code {
+    font-weight: 400;
     font-size: 0.85em;
+  }
+  .sub-difficulty{
+    justify-content: center;
+    padding-left: 0.6em;
+  }
+  .sub-difficulty p{
+    font-size: 0.75em;
+
+  }
+  .sub-difficulty .span{
+    padding-top: 0.5em;
+    font-size: 0.75em;
+  }
+  
+  .difficulty .span{
+    font-size: 1em;
+  }
+  .other-sem{
+    display: flex;
+    flex-direction: column;  
+    justify-content: center;
+    align-items: center;
   }
 
   /* for the files page */
+  .sub-semester-div .top-title{
+    font-size: 1.5em;
+    padding-top: 0.5em;
+  }
+  .marks{
+    font-size: 0.75em;
+  }
   .note-title {
     font-size: 1.5em;
     font-weight: 90;
   }
   .sem-content {
     font-size: 1.15em;
+  }
+  /* single-note file */
+
+  .single-card{
+    display: block;
+  }
+  .file-title{
+    font-size: 0.2em;
+  }
+  .single-card .fa{
+    font-size: 1em;
+  }
+  .single-card h5{
+    font-size: 0.9em;
+  }
+  .single-card i{
+    font-size: 0.7em;
   }
   /* blog page */
   .time {
@@ -493,6 +655,21 @@ a.article-title:hover {
   /* for blog detail */
   .blog-media {
     margin: auto;
+    padding: 0;
+  }
+
+  /*  foooter -part */
+  .footer-title{
+    font-size: 1.25em;
+  }
+  .footer-right p{
+    font-family: var(--paragraph-font);
+  }
+  .quick-links ul{
+    padding: 0;
+    margin:0;
+  }
+  .social-media{
     padding: 0;
   }
 }

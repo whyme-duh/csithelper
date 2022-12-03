@@ -2,13 +2,14 @@
 	
 
 {% extends "blog/base.html"%}
-{% block title%}<title>Error! Try Again</title>{%endblock %}
+<title>{% block title%}Error! Try Again{%endblock %}</title>
 {%block content %}
-<div class="container">
+<div class="container h-100">
 	<div class="row d-flex justify-content-center">
 		<div class="error-title text-center mt-5 pt-5">
-			<h1>404 ERROR</h1>
-			<p>Opps! Page not found</p>
+			<h1>Wrong Side of the Website</h1>
+			<p>Page not found</p>
+			<a href="{% url 'csit'%}" >Go Home</a>
 		</div>
 		
 	</div>

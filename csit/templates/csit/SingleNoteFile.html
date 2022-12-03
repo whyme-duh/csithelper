@@ -1,5 +1,9 @@
 {% extends "blog/base.html"%}
 
+<title>
+	{% block title %}{{page_title.name}}{% endblock %}
+	
+</title>
 {% block content %}
 <div class="container ">
     <div class="row p-3 d-flex justify-content-between">
@@ -10,9 +14,9 @@
 			/<a href="{% url 'subject-detail' note.subject.semester.id note.subject.slug %}">{{note.subject}}</a>
             <div class="file-detail d-flex justify-content-between pt-3">
                 <h5 class="note-title text-center pt-2">{{note.name}}</h5>
-				<a href="{{note.download_link}}" ><button>Download</button></a>
+				<button><a href="{{note.download_link}}"><i class="fa fa-download"></i></a></button>
             </div>
-            <iframe src="{{note.link}}" class="embed-responsive-item drive-file mt-5 pt-5" allowfullscreen ></iframe>
+            <iframe src="{{note.link}}" class="embed-responsive-item drive-file " allowfullscreen ></iframe>
        
             {% endfor %}
           

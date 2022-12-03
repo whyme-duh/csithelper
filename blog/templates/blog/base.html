@@ -4,7 +4,7 @@
 <head >
 	<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="shortcut icon" href="media/icons/icon.jpg">
+  <link rel="shortcut icon" href="/media/icons/icon.jpg">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
@@ -16,16 +16,14 @@
   <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
   <script src="{% static 'blog/index.js' %} "></script>
   
-  {% if title %}
-    <title>{{title}}</title>
-  {% else %}
-    <title>CSIT NEPAL</title>
-  {% endif %}
+  
+  <title>{% block title%}{% endblock%}</title>
+  
 
 </head>
 <body>
 	<header class="site-header">
-    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+    <nav class="navbar navbar-expand-lg  fixed-top">
       <div class="container">
         <!-- <a class="navbar-brand" href="{% url 'csit' %}" style="color: black;font-weight: 900;font-size: 1.75em;"><img src="media/icons/logo.png" alt="LOGO" width="150"></a> -->
         <a class="navbar-brand" href="{% url 'csit' %}" ><img class="logo" src="/media/icons/snnepal.png" alt="logo-img"></a>
@@ -35,10 +33,10 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav ml-auto h5">
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'blogs' %}">BLOGS </a>
+              <a class="nav-link" href="{% url 'blogs' %}">Blogs </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'colleges' %}">COLLEGES </a>
+              <a class="nav-link" href="{% url 'colleges' %}">Colleges </a>
 
               <!-- <a class="nav-link" href="{% url 'blog-home' %}">USER UPLOADS</a> -->
             </li>
@@ -104,7 +102,7 @@
         </div>
         <div class="col-md-3">
           <h5 class="footer-title pt-4 m-1 text-left pl-md-3 ">Follow us</h5>
-          <div class="social-media p-2 text-left mt-4">
+          <div class="social-media p-md-2 text-left mt-md-4">
             <a href="#" class="fa fa-facebook"></a>
             <a href="#" class="fa fa-instagram"></a>
             <a href="#" class="fa fa-pinterest"></a>

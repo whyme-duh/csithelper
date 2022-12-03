@@ -1,6 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Lobster+Two&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
-::root {
+
+
+:root {
+  --primary-title-font: 'Barlow Condensed', sans-serif;
+  --paragraph-font:'Lobster Two', cursive;
+  --sem-font:'Anton', sans-serif;
 }
 *{
   margin: 0;
@@ -8,21 +14,13 @@
 }
 
 body {
-  background: #ffffff;
+  background-color:#EDE2DC;
   color: #333333;
   height: 100%;
   min-height: 100%;
   margin-top: 4rem;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: #444444;
-}
 
 ul {
   margin: 0;
@@ -37,10 +35,13 @@ ul {
 }
 .site-header .navbar-nav .nav-link {
   color: #1c1d1f;
+  margin-right: 0.5em;
+  font-size: 1.25em;
+  font-family: var(--paragraph-font);
 }
 
 .site-header .navbar-nav .nav-link:hover {
-  opacity: 0.7;
+  border-bottom: 1px solid blue;
 }
 
 .site-header .navbar-nav .nav-link.active {
@@ -60,14 +61,18 @@ ul {
 }
 .top-title{
   font-size: clamp(1.5em,5vh,3em);
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: var(--sem-font);
 
 }
 .title p{
   font-weight: 900;
-  font-family: monospace;
+  font-size: 1.25em;
+  color: black;
+  font-family:var(--paragraph-font);
 }
-
+nav{
+  background-color: #5580E9;
+}
 .files {
   background-color: rgb(175, 195, 212);
 }
@@ -100,6 +105,7 @@ ul {
   height: 70vh;
   width: 100%;
 }
+
 .front-page-img{
   margin: 0;
   padding: 0;
@@ -153,6 +159,7 @@ form .fa{
   border-radius: 15px;
   
 }
+
 .semester-box{
   display: flex;
   flex-wrap: wrap;
@@ -172,30 +179,40 @@ form .fa{
   border: 0;
   animation-name: card-animation;
   animation-duration:1s ;
-  /* box-shadow: 0px 1px 5px rgb(223, 222, 222); */
   border-radius:10px ;
-  background-color: rgb(254, 221, 175);
+  box-shadow: 7px 10px 5px rgb(223, 222, 222);
+  background-color: #C1C8E4;
 }
 .sem-box .card{
   border: 0;
   animation-name: card-animation;
   animation-duration:1s ;
-  box-shadow: 0px 1px 10px rgb(223, 222, 222);
+  /* box-shadow: 0px 10px 10px rgb(223, 222, 222); */
   border-radius:10px ;
-  background-color: rgb(241, 221, 184);
+  background-color: #C1C8E4;
+
+
 
 }
 .card:hover{
   cursor: pointer;
-  background-color: rgba(254, 221, 175, 0.618);
+  transition: 0.5s ease;
+  transform: scaleX(110%);
+  transform: scaleY(105%);
+}
+.sem-box .card:hover{
+  cursor: pointer;
 
 
 
 }
+
 .content-section {
   padding: 10px 20px;
   border-radius: 15px;
 }
+
+
 .box .fa:hover{
   opacity: 0.5;
 }
@@ -275,7 +292,7 @@ a.article-title:hover {
 
 .other-sem h1{
    font-size: 2em;
-   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   font-family: var(--sem-font)
 }
 .other-sem a{
   color: black;
@@ -299,8 +316,9 @@ a.article-title:hover {
   text-decoration: none;
 }
 .sem-title {
-  font-size: clamp(1em, 1.25em,3em);
+  font-size: clamp(1em, 3.25vh,3em);
   font-weight: 700;
+  font-family: var(--primary-title-font);
 }
 
 .semester-desc{
@@ -407,11 +425,16 @@ a.article-title:hover {
   color: grey;
   padding: 1em;
 }
-
+main{
+  position: relative;
+  min-height: 70vh;
+}
 /* footer */
 .page-footer{
+  position: absolute;
+  width: 100%;
   margin-top: 5em;
-  background-color: rgba(194, 189, 189, 0.732);
+  background-color: #C1C8E4;
 }
 
 .footer-right{
@@ -425,10 +448,13 @@ a.article-title:hover {
   color: rgb(118, 113, 113);
 }
 .footer-title {
-  font-family: monospace;
-  font-size: clamp(0.5em, 2.5vh, 2em);
+  font-family: var(--primary-title-font);
+  font-size: clamp(0.5em, 3vh, 2.5em);
   font-weight: 900;
  
+}
+.footer-right p{
+  font-family: var(--paragraph-font);
 }
 .quick-links ul{
   padding-top: 1em;
@@ -522,11 +548,18 @@ a.article-title:hover {
   .sub-intro {
     font-size: 1.2em;
   }
-  
-  .sem-title {
-    font-size: 0.75em;
+  .semester-box .card{
+    border: 0;
+    animation-name: card-animation;
+    animation-duration:1s ;
+    border-radius:10px ;
+    box-shadow: 0px 2px 5px rgb(223, 222, 222);
+  }
+  .sem-box .sem-title {
+    font-size: 1.15em;
     padding-bottom: 0em;
-    text-align: left;
+    font-weight: 900;
+    text-align: center;
   }
   .semester-desc{
     text-align: left;
@@ -551,10 +584,11 @@ a.article-title:hover {
     font-size: 1.1em;
   }
   .content-code {
+    font-weight: 400;
     font-size: 0.85em;
   }
   .sub-difficulty{
-    justify-content: flex-start;
+    justify-content: center;
     padding-left: 0.6em;
   }
   .sub-difficulty p{
@@ -626,6 +660,18 @@ a.article-title:hover {
   }
 
   /*  foooter -part */
-  
+  .footer-title{
+    font-size: 1.25em;
+  }
+  .footer-right p{
+    font-family: var(--paragraph-font);
+  }
+  .quick-links ul{
+    padding: 0;
+    margin:0;
+  }
+  .social-media{
+    padding: 0;
+  }
 }
 

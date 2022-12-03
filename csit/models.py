@@ -45,7 +45,7 @@ class Subject(models.Model):
 	difficulty = models.CharField(max_length=80, choices=DIFFICULT_LEVEL, default = MEDIUM)
 	slug = models.SlugField(null = True, unique = True)
 	fullMarks = models.CharField(max_length=90, default="60" , null= False)
-	labMarks = models.CharField(max_length=90 , null= True, blank = True, default="25")
+	labMarks = models.CharField(max_length=90 , null= True, blank = True, default="20")
 
 	def __str__(self):
 		return f'{self.title}'
@@ -65,13 +65,14 @@ class Category(models.Model):
 class NoteFile(models.Model):
 	link = models.URLField(blank=False, null = True)
 	download_link = models.URLField(blank = False, null= True)
+	sem = models.ForeignKey(Semester, on_delete=models.CASCADE, related_name="semester" , null =True)
 	subject = models.ForeignKey(Subject, on_delete=models.CASCADE, related_name="files", null=True)
 	category = models.ForeignKey(Category , on_delete=models.SET_NULL, related_name= "categories", null = True)
 	name = models.CharField(max_length=80, blank = False, null = True)
 	slug = models.SlugField(null= True, unique=True)
 
 	def __str__(self) :
-		return f'{self.subject} :: {self.category} :: {self.name} ' 
+		return f'{self.subject} subject, in {self.category} category with name {self.name} ' 
 		
 	
 

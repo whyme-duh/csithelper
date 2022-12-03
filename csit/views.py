@@ -56,10 +56,13 @@ def semesterView(request):
         
 
 def semesterDetailView(request, semester_slug):
+    # this will direct tile 
+    page_title = Semester.objects.filter(id = semester_slug).first()
+
     id = get_object_or_404(Semester, pk = semester_slug)
     subjects = Subject.objects.filter(semester = id)
     semesters = Semester.objects.filter().exclude(title = id)
-    return render(request, 'csit/subjects_detail.html' , {"subjects" : subjects, 'semester' : semesters})
+    return render(request, 'csit/subjects_detail.html' , {"subjects" : subjects, "page_title": page_title,'semester' : semesters})
 
 
 # it shows the list of the files on the respective subjects
@@ -67,9 +70,12 @@ def semesterDetailView(request, semester_slug):
 
 def SubjectDetailView(request, semester_slug, subject_name):
     slug = get_object_or_404(Subject, semester= semester_slug, slug = subject_name)
+    page_title = Subject.objects.filter(title = slug).first()
+
     notes =  NoteFile.objects.filter(subject = slug)
     return render(request, 'csit/notefiles_detail.html', {
         "notes": notes,
+        "page_title": page_title,
         "subjects" : Subject.objects.filter(semester = semester_slug).exclude(title = slug)
     } )
 # class SubjectDetailView(ListView):
@@ -87,9 +93,12 @@ def SubjectDetailView(request, semester_slug, subject_name):
 def NoteFileDetailView(request,semester_slug, subject_name,  filename):
     # this will retrieve an Subject object with requested semester and subjects
     slug = get_object_or_404(Subject, semester= semester_slug, slug = subject_name)
+    page_title = NoteFile.objects.filter(slug= filename).first()
+
     fname = get_object_or_404(NoteFile, slug = filename )
     return render(request, 'csit/SingleNoteFile.html', {
         "notes" : NoteFile.objects.filter(slug = filename),
+        "page_title": page_title,
         "related_notes" : NoteFile.objects.filter(subject = slug).exclude(slug = filename),
     })
 

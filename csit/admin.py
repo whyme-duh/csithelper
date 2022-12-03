@@ -17,7 +17,7 @@ class SubjectAdmin(admin.ModelAdmin):
 
 @admin.register(NoteFile)
 class NoteFileAdmin(admin.ModelAdmin):
-	list_filter = ('subject','category', )
+	list_filter = ('subject','sem','category', )
 	prepopulated_fields = {'slug' : ('name', ),
 		}
 
