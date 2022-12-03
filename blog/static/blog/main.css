@@ -14,7 +14,7 @@
 }
 
 body {
-  background-color:#EDE2DC;
+  /* background-color:#f6f2f1; */
   color: #333333;
   height: 100%;
   min-height: 100%;
@@ -52,7 +52,7 @@ ul {
 
 .title h1{
   font-size: 3em;
-  color: white;
+  color: black;
   font-weight: 900;
 }
 .title h5{
@@ -67,6 +67,7 @@ ul {
 .title p{
   font-weight: 900;
   font-size: 1.25em;
+  letter-spacing: 2px;
   color: black;
   font-family:var(--paragraph-font);
 }
@@ -102,8 +103,8 @@ nav{
   display: none;
 }
 .background-image{
-  height: 70vh;
-  width: 100%;
+  height: 80vh;
+  width: 80%;
 }
 
 .front-page-img{
@@ -149,11 +150,21 @@ input[type="search"]:focus{
   outline: none;
 }
 form .fa{
-  background-color: white;
+  background-color: black;
   font-size: 0.5em;
   
 }
-
+.fa-search{
+  color: white;
+}
+.error-title h1,
+.error-div h1{ 
+  font-family: var(--paragraph-font);
+}
+.error-div{
+  display: flex;
+  flex-direction: column;
+}
 .box,
 .sem-box {
   border-radius: 15px;
@@ -530,11 +541,14 @@ main{
     font-size: 0.85em;
   }
   .front-page-img img{
-    height: 40vh;
+    height: 50vh;
+    width: 100%;
   }
-  
-  .front-page-img .title{
-    font-size: 0.85em;
+  .front-page-img h1{
+    font-size: 1.5em;
+  }
+  .front-page-img p{
+    font-size: 1em;
   }
 
   .content h4 {

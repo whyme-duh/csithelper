@@ -2,9 +2,9 @@
 {% load static %}
 {% block content%}
 <div class=" container-fluid front-page-img rounded d-flex justify-content-center align-items-center">
-    <img src="/media/webimages/background.jpg" alt = "background-image" class="background-image"> 
+    <img src="/media/webimages/a.jpg" alt = "background-image" class="background-image"> 
     <div class="title m-5" >
-        <h1>CSIT NEPAL</h1>
+        <h1>Csit Helper | Nepal</h1>
         <p>Resource Providing Platform Where You Can Find Books, Notes, etc For CSIT Students.</p>
         <form action="" method="GET">
             <input type="search" placeholder="Search Subjects ... " name="subjects">
@@ -76,9 +76,9 @@
     </div>
     {% endfor %}
     {% else %}
-    <div class="error-div">
-        <h1 class="error-text">No Result!</h1>
-
+    <div class="error-div ">
+        <h1 class="error-text">Could not find your searched subject. Try again!</h1>
+        <p><a href="{% url 'csit'%}">Go Home <i class="fa fa-home"></i></a></p>
     </div>
     {% endif %}
 </div>
